@@ -1,4 +1,5 @@
 from buttonclass import *
+from graphics import *
 import winsound
 
 class char:
