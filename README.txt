@@ -34,14 +34,3 @@ Parameter "key" is what key the player pushed, and vel is the velocity of the ch
 +) selection(clist, sen1, sen2, category): draw 2 choices on the screen. If the player choose sen1, the "category" will +1 frequency in "clist". If they pick sen2, the game will continue without adding.
 
 +) quitGame(): quit game by undrawing the main character.
-
-
-This project also has a function that returns the second variable in a pair so that when showing the highest result, the program can sort from the category with the highest frequency to that with the lowest frequency.
-
-At first, I tried to put all the scenes in a single while loop, the program still ran but there was a problem: when I press "c" or "enter", the game keeps progress to the next scene without having any conversation with the NPC.
-Therefore, I have to split every scene out.
-I also tried to implement an Exit/Quit button. It worked, but after having clicked the button, the game will not close immediately. Instead, the player have to press a random key after clicking on the button in order to close the game.
-After splitting all the scenes out, I also make sure after each scene the player can close the game if they want to quit early. I kept getting a error saying getKey() was unable to execute because the window had been closed. As a result,
-I put each scene in a condition: "if run:" so that getKey() only be read when the game is running.
-I also attempted to include all the dialogues in a single textfile (like the testdialog.txt I included in the program) and set a loop so that it can save some time. However, each dialogues have different length and while some have latter response from the NPC, some do not, a loop will not be able to perform my desired result.
-For future development, I want to figure out how to condense the codes, especially the dialogues.
